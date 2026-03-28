@@ -29,7 +29,7 @@ export default function LoginPage() {
     <div style={s.bg}>
       <div style={s.card}>
         <div style={s.logo}>₹</div>
-        <h1 style={s.title}>InterestPro</h1>
+        <h1 style={s.title}>VADDIULTRA</h1>
         <p style={s.sub}>Loan & Interest Management</p>
         <p style={s.inviteNote}>🔐 Access by invite only</p>
         <form onSubmit={handleSubmit} style={s.form}>
