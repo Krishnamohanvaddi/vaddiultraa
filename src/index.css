@@ -1,0 +1,18 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0f1117; color: #e2e8f0; font-family: 'Segoe UI', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+input, button, textarea, select { font-family: inherit; }
+input::placeholder, textarea::placeholder { color: #334155; }
+::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+
+/* Mobile: hide sidebar, show top bar */
+@media (max-width: 640px) {
+  aside { display: none !important; }
+  main { padding: 70px 14px 24px !important; }
+  div[style*="display: none"][class*="mobile"] { display: flex !important; }
+}
+
+/* Force mobile header and menu to show on small screens */
+@media (max-width: 640px) {
+  [data-mobile-header] { display: flex !important; }
+  [data-mobile-menu] { display: block !important; }
+}
