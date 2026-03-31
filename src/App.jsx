@@ -1,4 +1,4 @@
-import { useAuth } from "./context/AuthContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
 import ChatBot from "./components/ChatBot";
@@ -16,4 +16,10 @@ function AppContent() {
   );
 }
 
-export default AppContent;
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
+  );
+}
