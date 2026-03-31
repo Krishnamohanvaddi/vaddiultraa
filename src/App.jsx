@@ -1,16 +1,19 @@
-import { AuthProvider, useAuth } from "./context/AuthContext";
+import { useAuth } from "./context/AuthContext";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
+import ChatBot from "./components/ChatBot";
 
 function AppContent() {
   const { user } = useAuth();
-  return user ? <Dashboard /> : <LoginPage />;
-}
 
-export default function App() {
+  if (!user) return <LoginPage />;
+
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <>
+      <Dashboard />
+      <ChatBot />   {/* 👈 ADD HERE */}
+    </>
   );
 }
+
+export default AppContent;
